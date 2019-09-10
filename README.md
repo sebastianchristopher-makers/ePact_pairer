@@ -13,10 +13,10 @@ $ cd ePact_pairer
 ```
 run
 ```
-$ java -cp ./ Pairer
+$ java -cp build/classes/java/main Pairer
 ```
 to assign a pair and a three, or
 ```
-$ java -cp ./ Pairer -crunch
+$ java -cp build/classes/java/main Pairer -crunch
 ```
 to assign three pairs, with the spare person paired with "Captain Crunch".
