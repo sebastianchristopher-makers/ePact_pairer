@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import static spark.Spark.get;
 import static spark.Spark.post;
+import static spark.SparkBase.port;
 
 public class App {
 
@@ -20,7 +21,7 @@ public class App {
             port = 4567;
         }
 
-        SparkBase.setPort(port);
+        port(port);
 
         get("/", (request, response) -> {
             return new ModelAndView(new HashMap(), "templates/index.vtl");

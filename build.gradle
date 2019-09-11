@@ -18,8 +18,4 @@ dependencies {
     compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
 }
 
-defaultTasks = ['clean']
-task stage(dependsOn: ['build', 'clean'])
-build.mustRunAfter clean
-
-configurations.compile.transitive = false
+task stage(dependsOn: ['clean', 'installDist'])
