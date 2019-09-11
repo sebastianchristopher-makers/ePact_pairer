@@ -1,8 +1,9 @@
-import static spark.Spark.*;
-
 import spark.ModelAndView;
 
 import java.util.HashMap;
+
+import static spark.Spark.get;
+import static spark.Spark.post;
 
 public class App {
 
@@ -28,8 +29,10 @@ public class App {
         });
 
         get("/pairs", (request, response) -> {
-            HashMap model = new HashMap();
+            HashMap<String, String> model = new HashMap<String, String>();
             model.put("pairs", pairs.getPairs());
+
+//            model.put("pairs", "foobar");
             return new ModelAndView(model, "templates/pairs.vtl");
         }, new spark.template.velocity.VelocityTemplateEngine());
     }
