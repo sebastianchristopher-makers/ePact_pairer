@@ -19,6 +19,7 @@ dependencies {
 }
 
 defaultTasks = ['clean']
-task stage(dependsOn: ['clean', 'installApp'])
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
 
 configurations.compile.transitive = false
