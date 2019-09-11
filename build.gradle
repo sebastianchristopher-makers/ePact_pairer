@@ -21,3 +21,6 @@ dependencies {
     compile 'com.sparkjava:spark-core:2.2'
     compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
 }
+
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installApp'])
