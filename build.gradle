@@ -1,8 +1,10 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
+apply plugin: 'application'
 
-version '1.0-SNAPSHOT'
+archivesBaseName = "pairer"
+version = '1.0'
+applicationName = "pairer"
+mainClassName = "App"
 
 sourceCompatibility = 1.8
 
@@ -15,5 +17,8 @@ dependencies {
     compile 'com.sparkjava:spark-core:2.2'
     compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
 }
+
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installApp'])
 
 configurations.compile.transitive = false

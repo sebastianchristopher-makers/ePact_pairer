@@ -1,4 +1,5 @@
 import spark.ModelAndView;
+import spark.SparkBase;
 
 import java.util.HashMap;
 
@@ -10,6 +11,17 @@ public class App {
     private static Pairer pairs;
 
     public static void main(String[] args) {
+
+        ProcessBuilder process = new ProcessBuilder();
+        Integer port;
+        if (process.environment().get("PORT") != null) {
+            port = Integer.parseInt(process.environment().get("PORT"));
+        } else {
+            port = 4567;
+        }
+
+        SparkBase.setPort(port);
+
         get("/", (request, response) -> {
             return new ModelAndView(new HashMap(), "templates/index.vtl");
         }, new spark.template.velocity.VelocityTemplateEngine());
@@ -31,8 +43,6 @@ public class App {
         get("/pairs", (request, response) -> {
             HashMap<String, String> model = new HashMap<String, String>();
             model.put("pairs", pairs.getPairs());
-
-//            model.put("pairs", "foobar");
             return new ModelAndView(model, "templates/pairs.vtl");
         }, new spark.template.velocity.VelocityTemplateEngine());
     }
