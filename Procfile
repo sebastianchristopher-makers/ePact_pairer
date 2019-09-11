@@ -1,1 +1,1 @@
-web: ./build/install/todo/bin/pairer
+web: java -jar build/libs/pairer-1.0-SNAPSHOT.jar
