@@ -2,6 +2,12 @@ plugins {
     id 'java'
 }
 
+apply plugin: 'java'
+apply plugin: 'application'
+
+archivesBaseName = "pairer"
+applicationName = "pairer"
+mainClassName = "App"
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
