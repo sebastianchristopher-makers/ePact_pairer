@@ -1,0 +1,7 @@
+
+jsquid:S1602"SRemove useless curly braces around statement and then remove useless return keyword(Ìó¶Æ
+|squid:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(²Äò˜ÿÿÿÿÿ8ÔÈÍ‹Ò-
+\squid:UselessImportCheck",Remove this unused import 'spark.SparkBase'.(ØÄìÒúÿÿÿÿ8ğ°•Ò-
+1squid:S1220""Move this file to a named package.
+esquid:S1192!"GDefine a constant instead of duplicating this literal "/pairs" 3 times.(Şñ²¿8§ıê‰Ò-
+\squid:UselessImportCheck"1Remove this unused import 'spark.SparkBase.port'.(Œà¹ñ8°¸–Ò-

@@ -2,7 +2,9 @@
 
 A simple Java program to assign pairs for acebook project.
 
-## To use:
+Heroku web app is [here](https://epact-pairer.herokuapp.com)
+
+## To use from command line:
 clone repo
 ```
 $ git clone https://github.com/sebastianchristopher/ePact_pairer
